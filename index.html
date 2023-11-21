@@ -50,6 +50,9 @@
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item text-center">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item text-center">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -208,8 +211,78 @@
       </section>
       <!-- Projects End -->
 
+      <!-- Gallery Start -->
+      <section id="gallery" style="padding-top: 7rem">
+        <div class="container">
+          <div class="row text-center mb-5">
+            <div class="col" data-aos="fade-down" data-aos-offset="400">
+              <h2>Gallery</h2>
+            </div>
+          </div>
+          <div class="row g-0 justify-content-center">
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/1.jpg" alt="Gambar 1" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/2.jpg" alt="Gambar 2" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/3.jpg" alt="Gambar 3" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/4.jpg" alt="Gambar 4" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/5.jpg" alt="Gambar 5" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/6.jpg" alt="Gambar 6" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/7.jpg" alt="Gambar 7" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/8.jpg" alt="Gambar 8" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/9.jpg" alt="Gambar 9" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#">
+                <img class="img-fluid w-100" src="img/thumbnail/10.jpg" alt="Gambar 10" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#e2edff"
+            fill-opacity="1"
+            d="M0,0L120,53.3C240,107,480,213,720,240C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
+      </section>
+      <!-- Gallery End -->
+
       <!-- Contact Start -->
-      <section id="contact" style="padding-top: 7rem">
+      <section id="contact" style="background-color: #e2edff; padding-top: 7rem">
         <div class="container">
           <div class="row text-center mb-5">
             <div class="col" data-aos="fade-down" data-aos-offset="500">
@@ -291,6 +364,14 @@
     <!-- Animate on scroll Javascript -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      const gallery = document.querySelectorAll("#gallery img");
+
+      gallery.forEach((img, i) => {
+        img.dataset.aos = "flip-right";
+        img.dataset.aosOffset = 400;
+        img.dataset.aosDelay = i * 50;
+      });
+
       AOS.init({
         duration: 500,
         once: true,
