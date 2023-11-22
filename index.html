@@ -19,6 +19,9 @@
 
     <!-- Animate on scroll CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- My Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Navbar Start -->
@@ -271,6 +274,38 @@
             </div>
           </div>
         </div>
+
+        <div id="3d-gallery" class="container" style="padding-top: 10rem">
+          <div class="row text-center mb-5">
+            <div class="col">
+              <h2>3D Gallery</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Singa</h4>
+                <img class="keyboard-img" src="img/tilt/1.png" alt="Singa" />
+                <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Hiu</h4>
+                <img class="keyboard-img" src="img/tilt/2.png" alt="Hiu" />
+                <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Burung</h4>
+                <img class="keyboard-img" src="img/tilt/3.png" alt="Burung" />
+                <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#e2edff"
@@ -363,7 +398,7 @@
     <!-- Animate on scroll Javascript -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      const gallery = document.querySelectorAll("#gallery img");
+      const gallery = document.querySelectorAll("#gallery .img-fluid");
 
       gallery.forEach((img, i) => {
         img.dataset.aos = "flip-right";
@@ -386,6 +421,17 @@
       gsap.from("#home img", { duration: 1, rotateY: 360, opacity: 0 });
       gsap.from("#home h1", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "circ.out" });
       gsap.from("#home p", { duration: 2, delay: 0.7, text: "" });
+    </script>
+
+    <!-- Vanilla tilt.js -->
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
+        max: 25,
+        speed: 400,
+        reverse: true,
+        glare: true,
+      });
     </script>
 
     <!-- Hide menu toggle after clik on selected menu or clik on document area -->
